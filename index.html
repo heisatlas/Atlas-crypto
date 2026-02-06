@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atlas Crypto Trading</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<section class="news">
+<h2>Crypto News</h2>
+<ul id="newsFeed"></ul>
+</section>
+
+<div class="admin" id="adminPanel">
+<h2>Admin Dashboard</h2>
+<p>Pending Withdrawals: <span id="pendingCount">1</span></p>
+<button class="primary" onclick="approveAll()">Approve All</button>
+<button onclick="closeAdmin()">Close</button>
+</div>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Atlas Crypto</div>
+  <ul class="nav-links">
+    <li>Markets</li>
+    <li>Trade</li>
+    <li>Wallet</li>
+    <li>Support</li>
+  </ul>
+  <div class="auth">
+    <span id="btcTicker">$68,450</span>
+    <button onclick="openLogin()">Login</button>
+    <button class="primary">Register</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Trade Crypto with Confidence</h1>
+  <p>Fast. Secure. Global.</p>
+  <div class="hero-buttons">
+    <button class="primary">Get Started</button>
+    <button>View Markets</button>
+  </div>
+</section>
+
+<!-- MARKET TABLE -->
+<section class="markets">
+  <h2>Live Markets</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Pair</th>
+        <th>Price</th>
+        <th>24h</th>
+        <th>Volume</th>
+      </tr>
+    </thead>
+    <tbody id="marketData">
+      <tr>
+        <td>BTC/USDT</td>
+        <td class="price">68450</td>
+        <td class="pos">+2.3%</td>
+        <td>1.2B</td>
+      </tr>
+      <tr>
+        <td>ETH/USDT</td>
+        <td class="price">3450</td>
+        <td class="neg">-1.1%</td>
+        <td>650M</td>
+      </tr>
+      <tr>
+        <td>SOL/USDT</td>
+        <td class="price">142.20</td>
+        <td class="pos">+4.8%</td>
+        <td>210M</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- WALLET -->
+<section class="wallet">
+  <h2>Your Wallet</h2>
+  <div class="wallet-grid">
+    <div class="card">BTC<br><strong>0.542 BTC</strong><br>$37,000</div>
+    <div class="card">ETH<br><strong>4.20 ETH</strong><br>$14,490</div>
+    <div class="card">USDT<br><strong>12,000</strong><br>$12,000</div>
+  </div>
+</section>
+<section class="kyc">
+<h2>KYC Verification</h2>
+<p id="kycStatus">Status: <span class="neg">Not Verified</span></p>
+<button class="primary" onclick="submitKYC()">Submit Documents</button>
+</section>
+
+<!-- LOGIN MODAL -->
+<div class="modal" id="loginModal">
+  <div class="modal-box">
+    <h3>Login</h3>
+    <input type="text" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button class="primary" onclick="fakeLogin()">Login</button>
+    <button onclick="closeLogin()">Close</button>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Atlas Crypto Trading. All rights reserved.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

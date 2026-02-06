@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  background: #0b0f14;
+  color: #fff;
+}
+
+/* NAV */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #111827;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.auth button {
+  margin-left: 10px;
+}
+
+.primary {
+  background: #22c55e;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #000;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: radial-gradient(circle, #1f2933, #020617);
+}
+
+.hero-buttons button {
+  margin: 10px;
+}
+
+/* MARKETS */
+.markets {
+  padding: 40px 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #1f2937;
+}
+
+.pos { color: #22c55e; }
+.neg { color: #ef4444; }
+
+/* WALLET */
+.wallet {
+  padding: 40px 20px;
+}
+
+.wallet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: #020617;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.modal-box input {
+  width: 100%;
+  margin: 8px 0;
+  padding: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
+.wallet-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.wallet-actions input,
+.wallet-actions select {
+  padding: 8px;
+  background: #020617;
+  color: #fff;
+  border: 1px solid #1f2937;
+}
+.admin {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #020617;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
